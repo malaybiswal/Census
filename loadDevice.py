@@ -9,7 +9,7 @@ import pymysql
 imei=1234567890123456
 DateReceived='2015-05-01'
 selectsql= """select CustomerID,BusinessID,countingProfileID from CountingProfile"""
-conn = pymysql.connect(host='censuscountersdev.czywg4t7fvct.us-east-1.rds.amazonaws.com', unix_socket='/tmp/mysql.sock', user='Census', passwd='CensusCountersDEV123=6', db='CensusCountersDEV',use_unicode=True, charset="utf8")
+conn = pymysql.connect(host='host', unix_socket='/tmp/mysql.sock', user='user', passwd='pwd', db='db',use_unicode=True, charset="utf8")
 cur = conn.cursor(pymysql.cursors.DictCursor)
 CustomerIDs=[];BusinessIDs=[];countingProfileIDs=[]
 try:
