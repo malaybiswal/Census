@@ -16,7 +16,7 @@ password='costco'
 phone='+1-425-313-8100'
 
 sql="""INSERT INTO Customer(name,Address,city,state,country,zip,phone,username,password) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s)"""
-conn = pymysql.connect(host='censuscountersdev.czywg4t7fvct.us-east-1.rds.amazonaws.com', unix_socket='/tmp/mysql.sock', user='Census', passwd='CensusCountersDEV123=6', db='CensusCountersDEV',use_unicode=True, charset="utf8")
+conn = pymysql.connect(host='host', unix_socket='/tmp/mysql.sock', user='user', passwd='pwd', db='db',use_unicode=True, charset="utf8")
 cur = conn.cursor()
 try:
     cur.execute(sql,(name,addr,city,state,country,zipcode,phone,username,password))
