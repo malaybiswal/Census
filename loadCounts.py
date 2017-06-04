@@ -12,7 +12,7 @@ start = time.time()
 z=0
 #file = open("/Users/mala0858/malay/python/Census/Counts.txt", "w")
 selectsql= """select d.imei,l.Latitude,l.Longitude from Location l, Device d where l.CustomerID=d.customerID and l.BusinessID=d.businessID"""
-conn = pymysql.connect(host='censuscountersdev.czywg4t7fvct.us-east-1.rds.amazonaws.com', unix_socket='/tmp/mysql.sock', user='Census', passwd='CensusCountersDEV123=6', db='CensusCountersDEV',use_unicode=True, charset="utf8")
+conn = pymysql.connect(host='host', unix_socket='/tmp/mysql.sock', user='user', passwd='pwd', db='db',use_unicode=True, charset="utf8")
 cur = conn.cursor(pymysql.cursors.DictCursor)
 imei=[];lat=[];lng=[]
 try:
